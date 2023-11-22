@@ -13,44 +13,18 @@
           when you publish a batch with a CSV input file containing multiple image file URLs.
           To preview the element with an example image, try setting the src attribute to
           "https://s3.amazonaws.com/cv-demo-images/two-birds.jpg" -->
-    <crowd-image-classifier 
-        src="$https://raw.githubusercontent.com/abadias618/survey-cs6966/main/upscaled_images/${image_url}"
-        categories="['Yes', 'No']"
-        header="Was this image classified correctly? The label is: ${label} (without explanation)"
-        name="${filename}">
-
-       <!-- Use the short-instructions section for quick instructions that the Worker
-              will see while working on the task. Including some basic examples of 
-              good and bad answers here can help get good results. You can include 
-              any HTML here. -->
-        <short-instructions> Please select and option that answers the question.
-
-        <!-- Use the full-instructions section for more detailed instructions that the 
-              Worker can open while working on the task. Including more detailed 
-              instructions and additional examples of good and bad answers here can
-              help get good results. You can include any HTML here. -->
-        <full-instructions header="Does this image contain the object of interest?">
-            <h2>Detailed instructions</h2>
-            <p>Instructions for determining if you agree/disagree with the label assigned by the calssifier:</p>
-            <ol>
-	        <li>Begin by carefully examining the entire image</li>
-        	<li>Next determine if the label provided classifies the image</li>
-	        <li>If the label assigned, correctly labels the image, select an option</li>
-            </ol>
-        </full-instructions>
-    </crowd-image-classifier>
-
-    <crowd-image-classifier 
+    <crowd-image-classifier
+        id="ic"
         src="${image_url}"
-        categories="['Yes', 'No']"
-        header="Was this image classified correctly? The label is: ${label} (with explanation)"
+        categories="['${categories1}','${categories2}','${categories3}','${categories4}']"
+        header="${question_text} ${prediction}"
         name="${filename}">
-        <h1>${w_prediction}</h1>
+
        <!-- Use the short-instructions section for quick instructions that the Worker
               will see while working on the task. Including some basic examples of 
               good and bad answers here can help get good results. You can include 
               any HTML here. -->
-        <short-instructions> Please select and option that answers the question.
+        <short-instructions> Please select and option that answers the question.(The label is right after the question mark.)
 
         <!-- Use the full-instructions section for more detailed instructions that the 
               Worker can open while working on the task. Including more detailed 
@@ -58,11 +32,12 @@
               help get good results. You can include any HTML here. -->
         <full-instructions header="Does this image contain the object of interest?">
             <h2>Detailed instructions</h2>
-            <p>Instructions for determining if you agree/disagree with the label assigned by the calssifier:</p>
+            <p>Hi in the next images you'll find a question and a label right after the question mark ("?")</p>
             <ol>
 	        <li>Begin by carefully examining the entire image</li>
         	<li>Next determine if the label provided classifies the image</li>
 	        <li>If the label assigned, correctly labels the image, select an option</li>
+            <li>Thank you!</li>
             </ol>
         </full-instructions>
     </crowd-image-classifier>
