@@ -1,0 +1,70 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question.
+
+          Your image file URLs will be substituted for the "image_url" variable below 
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          "https://s3.amazonaws.com/cv-demo-images/two-birds.jpg" -->
+    <crowd-image-classifier 
+        src="${image_url}"
+        categories="['Yes', 'No']"
+        header="Was this image classified correctly? The label is: ${label} (without explanation)"
+        name="${filename}">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions> Please select and option that answers the question.
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Does this image contain the object of interest?">
+            <h2>Detailed instructions</h2>
+            <p>Instructions for determining if you agree/disagree with the label assigned by the calssifier:</p>
+            <ol>
+	        <li>Begin by carefully examining the entire image</li>
+        	<li>Next determine if the label provided classifies the image</li>
+	        <li>If the label assigned, correctly labels the image, select an option</li>
+            </ol>
+        </full-instructions>
+    </crowd-image-classifier>
+
+    <crowd-image-classifier 
+        src="${image_url}"
+        categories="['Yes', 'No']"
+        header="Was this image classified correctly? The label is: ${label} (with explanation)"
+        name="${filename}">
+        <h1>${w_prediction}</h1>
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions> Please select and option that answers the question.
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Does this image contain the object of interest?">
+            <h2>Detailed instructions</h2>
+            <p>Instructions for determining if you agree/disagree with the label assigned by the calssifier:</p>
+            <ol>
+	        <li>Begin by carefully examining the entire image</li>
+        	<li>Next determine if the label provided classifies the image</li>
+	        <li>If the label assigned, correctly labels the image, select an option</li>
+            </ol>
+        </full-instructions>
+    </crowd-image-classifier>
+
+</crowd-form>

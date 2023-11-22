@@ -1,0 +1,31 @@
+filename,label,w_prediction,wo_prediction,correct
+178.png,horse,horse the image is of a horse because it has four legs and is standing on the ground.,horse,1
+807.png,frog,cat the image is of a cat because it has a long tail pointy ears and a small face.,cat,0
+925.png,deer,deer the image is of a deer because it has antlers and is in a grassy field.,deer,1
+521.png,deer,deer the image is of a deer because it has antlers and is in a field with grass.,deer,1
+329.png,horse,horse the image is of a horse because it is an animal with four legs and a mane and long tail.,horse,1
+969.png,cat,cat the image is of a cat because it has a long tail pointy ears and whiskers.,cat,1
+293.png,airplane,airplane the image is of an airplane because it has wings and a propeller.,airplane,1
+82.png,deer,deer the image is of a deer because it has antlers and is in a grassy field.,deer,1
+452.png,frog,turtle the image is of a turtle because it has a hard shell and is on the ground.,turtle,0
+650.png,airplane,airplane the image is of an airplane because it is a vehicle that flies in the sky.,airplane,1
+939.png,deer,frog the image is of a frog because it has a long thin body and bulging eyes.,frog,0
+115.png,airplane,airplane the image is of a small airplane because it has wings a propeller and is in the,airplane,1
+422.png,horse,horse the image is of a horse because it has four legs and a long neck.,horse,1
+109.png,truck,truck the image is of a large vehicle that is used for transporting goods and materials.,truck,1
+909.png,ship,boat the image is of a boat because it is a watercraft that floats on water and is powered by sails or an engine.,boat,0
+645.png,frog,frog the image is of a frog because it has long legs and a long tail.,frog,1
+676.png,automobile,automobile the image is of a car because it has four wheels and a windshield.,automobile,1
+213.png,airplane,airplane the image is of an airplane because it has wings and a propeller and is flying in the,airplane,1
+404.png,airplane,airplane the image is of an airplane because it is a flying machine with wings and a propeller.,airplane,1
+45.png,automobile,automobile the image is of a car because it has four wheels and is parked.,automobile,1
+935.png,frog,frog the image is of a frog because it has a long slender body bulging eyes and,frog,1
+253.png,cat,cat the image is of a cat because it has a long tail pointy ears and is sitting on a sink.,cat,1
+313.png,frog,frog the image is of a frog because it has a long slender body long legs and a wide mouth,frog,1
+310.png,deer,deer the image is of a deer because it has antlers and is standing in a grassy area.,deer,1
+822.png,airplane,airplane the image is of an airplane because it has wings and a propeller.,airplane,1
+959.png,deer,bird the image is of a bird because it is a small animal with wings and a beak.,bird,0
+131.png,horse,horse the image is of a horse because it has four legs and is standing on the ground.,horse,1
+174.png,cat,cat the image is of a cat because it has a long tail pointy ears and whiskers.,cat,1
+390.png,deer,deer the image is of a deer because it has antlers and is standing in a field.,deer,1
+36.png,cat,cat the image is of a cat because it has a long tail pointy ears and is small in size.,cat,1
